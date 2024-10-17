@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="theme-toggle">
+    <label for="themeSwitch">Dark Mode</label>
+    <input type="checkbox" id="themeSwitch" name="theme">
+</div>
+
+<div class="container">
+    <h1>Add New User</h1>
+    <div id="message"></div>
+    <form id="userForm" class="form">
+        <div class="form-group">
+            <div class="input-box">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Name</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-box">
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-box">
+                <input type="number" id="age" name="age" required>
+                <label for="age">Age</label>
+            </div>
+        </div>
+        <div class="form-group file-input">
+            <label for="images" class="file-label">Upload Profile Images</label>
+            <input type="file" id="images" name="images" accept="image/*" multiple required>
+        </div>
+        <div id="preview"></div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>

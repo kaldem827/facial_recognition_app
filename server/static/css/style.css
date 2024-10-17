@@ -1,0 +1,177 @@
+/* Global styling for modern fonts and smooth layout */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode styling */
+body.dark-mode {
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+/* Container box for the form */
+.container {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Dark mode for container */
+.container.dark-mode {
+    background-color: #292929;
+}
+
+/* Form styling */
+.form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #5c67e8;
+    outline: none;
+    background-color: #f7f9ff;
+}
+
+/* Dark mode input fields */
+input.dark-mode {
+    background-color: #333;
+    border-color: #555;
+    color: #f5f5f5;
+}
+
+/* Label styling with floating effect */
+label {
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: #666;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 0.8rem;
+    font-size: 0.85rem;
+    color: #5c67e8;
+}
+
+/* Dark mode labels */
+label.dark-mode {
+    color: #bbb;
+}
+
+/* Button styling */
+button {
+    background-color: #5c67e8;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #4b55d8;
+    transform: translateY(-2px);
+}
+
+/* Image preview styling */
+#preview {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.preview-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.preview-image:hover {
+    transform: scale(1.1);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle label {
+    margin-right: 10px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* File input styling */
+.file-input {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.file-label {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+        width: 90%;
+    }
+}
